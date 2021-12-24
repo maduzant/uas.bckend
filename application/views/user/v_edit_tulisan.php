@@ -165,7 +165,7 @@
     <div class="pull-right hidden-xs">
       
     </div>
-    <strong>Copyright &copy; 2018  By Hermanto </a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2018  By MadVIo </a>.</strong> All rights reserved.
   </footer>
 
  

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 24 Mar 2021 pada 03.48
--- Versi server: 10.4.11-MariaDB
--- Versi PHP: 7.4.3
+-- Generation Time: Dec 24, 2021 at 05:33 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_album`
+-- Table structure for table `tbl_album`
 --
 
 CREATE TABLE `tbl_album` (
@@ -39,17 +39,17 @@ CREATE TABLE `tbl_album` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_album`
+-- Dumping data for table `tbl_album`
 --
 
 INSERT INTO `tbl_album` (`album_id`, `album_nama`, `album_tanggal`, `album_pengguna_id`, `album_author`, `album_count`, `album_cover`) VALUES
-(4, 'kuliah daring', '2017-01-24 01:31:13', 1, 'Administrator', 0, 'a5a076e5aba981105937f640da2a5eaa.jpg'),
-(5, 'alumni sukses', '2021-03-24 02:35:39', 1, 'Administrator', 0, 'a468a6be68d2061e1169ba9dc006bd5a.png');
+(4, ' Prestasi', '2017-01-24 01:31:13', 3, 'viorella ', 0, 'd26ffd565a1c6346c49563274226093b.jpg'),
+(5, 'Kuliah Daring', '2021-03-24 02:35:39', 3, 'viorella ', 0, '61595d414a350dc3ae96e10f2168bc15.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_inbox`
+-- Table structure for table `tbl_inbox`
 --
 
 CREATE TABLE `tbl_inbox` (
@@ -63,16 +63,17 @@ CREATE TABLE `tbl_inbox` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_inbox`
+-- Dumping data for table `tbl_inbox`
 --
 
 INSERT INTO `tbl_inbox` (`inbox_id`, `inbox_nama`, `inbox_email`, `inbox_kontak`, `inbox_pesan`, `inbox_tanggal`, `inbox_status`) VALUES
-(10, 'HERMANTO', 'hermantobs1p1@gmail.com', NULL, 'hallo min', '2018-05-09 13:59:07', 0);
+(10, 'HERMANTO', 'hermantobs1p1@gmail.com', NULL, 'hallo min', '2021-12-09 13:59:07', 0),
+(11, 'Madu Zaneta', 'viorellasv@student.uns.ac.id', NULL, 'Halo', '2021-12-24 03:32:27', 1);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_kategori`
+-- Table structure for table `tbl_kategori`
 --
 
 CREATE TABLE `tbl_kategori` (
@@ -82,11 +83,11 @@ CREATE TABLE `tbl_kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_kategori`
+-- Dumping data for table `tbl_kategori`
 --
 
 INSERT INTO `tbl_kategori` (`kategori_id`, `kategori_nama`, `kategori_tanggal`) VALUES
-(1, 'Biografi', '2016-09-06 05:49:04'),
+(1, 'Sejarah', '2016-09-06 05:49:04'),
 (2, 'Teknologi', '2016-09-06 05:50:01'),
 (3, 'Tips and Triks', '2016-09-06 05:59:39'),
 (5, 'Penelitian', '2016-09-06 06:19:26');
@@ -94,7 +95,7 @@ INSERT INTO `tbl_kategori` (`kategori_id`, `kategori_nama`, `kategori_tanggal`) 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_log_aktivitas`
+-- Table structure for table `tbl_log_aktivitas`
 --
 
 CREATE TABLE `tbl_log_aktivitas` (
@@ -110,7 +111,7 @@ CREATE TABLE `tbl_log_aktivitas` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_pengguna`
+-- Table structure for table `tbl_pengguna`
 --
 
 CREATE TABLE `tbl_pengguna` (
@@ -134,16 +135,16 @@ CREATE TABLE `tbl_pengguna` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_pengguna`
+-- Dumping data for table `tbl_pengguna`
 --
 
 INSERT INTO `tbl_pengguna` (`pengguna_id`, `pengguna_nama`, `pengguna_moto`, `pengguna_jenkel`, `pengguna_username`, `pengguna_password`, `pengguna_tentang`, `pengguna_email`, `pengguna_nohp`, `pengguna_facebook`, `pengguna_twitter`, `pengguna_linkdin`, `pengguna_google_plus`, `pengguna_status`, `pengguna_level`, `pengguna_register`, `pengguna_photo`) VALUES
-(1, 'Administrator', 'Just do it', 'L', 'admin', '21232f297a57a5a743894a0e4a801fc3', '-', 'Hermanto.hm11@gmail.com', '089531236123', 'facebook.com', 'twitter.com', '', '', 1, '1', '2016-09-03 06:07:55', '1376fab62abf4f185388683e1d7ddf6b.png');
+(3, 'viorella ', NULL, 'P', 'vio', '7a476522b745a28405719fa828fb9d08', NULL, 'viorellasv@student.uns.ac.id', '0899978786754', NULL, NULL, NULL, NULL, 1, '1', '2021-12-16 14:20:44', '97b6a6fcb64e3d6aaaa36a9abdb926bd.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_pengunjung`
+-- Table structure for table `tbl_pengunjung`
 --
 
 CREATE TABLE `tbl_pengunjung` (
@@ -154,50 +155,21 @@ CREATE TABLE `tbl_pengunjung` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_pengunjung`
+-- Dumping data for table `tbl_pengunjung`
 --
 
 INSERT INTO `tbl_pengunjung` (`pengunjung_id`, `pengunjung_tanggal`, `pengunjung_ip`, `pengunjung_perangkat`) VALUES
-(1, '2016-08-11 23:52:20', '127.0.0.1', 'Firefox'),
-(2, '2016-08-12 17:14:20', '127.0.0.1', 'Firefox'),
-(3, '2016-08-13 05:23:19', '127.0.0.1', 'Firefox'),
-(4, '2016-08-13 05:27:05', '127.0.0.1', 'Firefox'),
-(5, '2016-08-13 05:27:37', '127.0.0.1', 'Firefox'),
-(6, '2016-08-13 06:54:58', '127.0.0.1', 'Firefox'),
-(7, '2016-08-13 06:55:59', '127.0.0.1', 'Firefox'),
-(8, '2016-08-13 07:00:06', '127.0.0.1', 'Firefox'),
-(9, '2016-08-13 07:00:34', '127.0.0.1', 'Firefox'),
-(10, '2016-09-18 20:24:39', '127.0.0.1', 'Firefox'),
-(11, '2016-09-18 20:24:43', '127.0.0.1', 'Firefox'),
-(12, '2016-09-18 20:24:43', '127.0.0.1', 'Firefox'),
-(13, '2016-09-18 20:24:43', '127.0.0.1', 'Firefox'),
-(14, '2016-09-18 20:24:43', '127.0.0.1', 'Firefox'),
-(15, '2016-09-18 20:24:43', '127.0.0.1', 'Firefox'),
-(16, '2016-09-18 20:24:43', '127.0.0.1', 'Firefox'),
-(17, '2016-09-18 20:24:43', '127.0.0.1', 'Firefox'),
-(18, '2016-09-18 20:24:43', '127.0.0.1', 'Firefox'),
-(19, '2016-09-18 20:24:43', '127.0.0.1', 'Firefox'),
-(20, '2016-09-18 20:24:43', '127.0.0.1', 'Firefox'),
-(21, '2016-09-18 20:24:43', '127.0.0.1', 'Firefox'),
-(22, '2016-09-18 20:24:43', '127.0.0.1', 'Firefox'),
-(23, '2016-09-18 20:24:43', '127.0.0.1', 'Firefox'),
-(24, '2017-02-04 18:06:52', '::1', 'Chrome'),
-(25, '2017-02-04 18:07:16', '127.0.0.1', 'Firefox'),
-(26, '2017-02-04 18:08:31', '::1', 'Chrome'),
-(27, '2017-02-05 19:33:14', '::1', 'Chrome'),
-(28, '2017-02-05 20:20:59', '127.0.0.1', 'Firefox'),
-(29, '2017-02-06 18:21:08', '::1', 'Chrome'),
-(30, '2017-02-09 01:07:51', '::1', 'Chrome'),
-(31, '2017-02-10 20:12:05', '::1', 'Chrome'),
-(32, '2017-02-20 20:46:21', '::1', 'Chrome'),
-(33, '2017-02-22 04:04:16', '::1', 'Chrome'),
-(34, '2017-02-27 18:47:25', '::1', 'Chrome'),
-(35, '2017-03-02 06:09:25', '::1', 'Chrome'),
-(36, '2017-03-04 08:18:51', '::1', 'Chrome'),
-(37, '2017-03-12 20:40:32', '::1', 'Chrome'),
-(38, '2017-03-13 20:34:32', '::1', 'Chrome'),
-(39, '2017-03-23 04:08:15', '::1', 'Firefox'),
-(40, '2017-03-25 09:39:02', '::1', 'Firefox'),
+(1, '2021-12-11 23:52:20', '127.0.0.1', 'Firefox'),
+(2, '2021-12-12 17:14:20', '127.0.0.1', 'Firefox'),
+(3, '2021-12-13 05:23:19', '127.0.0.1', 'Firefox'),
+(4, '2021-12-13 05:27:05', '127.0.0.1', 'Firefox'),
+(5, '2021-12-13 05:27:37', '127.0.0.1', 'Firefox'),
+(6, '2021-12-23 06:54:58', '127.0.0.1', 'Firefox'),
+(7, '2021-12-24 06:55:59', '127.0.0.1', 'Firefox'),
+(9, '2021-12-22 07:00:34', '127.0.0.1', 'Firefox'),
+(10, '2021-12-18 20:24:39', '127.0.0.1', 'Firefox'),
+(12, '2021-12-18 20:24:43', '127.0.0.1', 'Firefox'),
+(13, '2021-12-18 20:24:43', '127.0.0.1', 'Firefox'),
 (41, '2017-03-25 10:16:45', '::1', 'Firefox'),
 (42, '2017-03-28 14:11:23', '::1', 'Firefox'),
 (43, '2017-03-29 22:39:17', '::1', 'Firefox'),
@@ -1063,8 +1035,7 @@ INSERT INTO `tbl_pengunjung` (`pengunjung_id`, `pengunjung_tanggal`, `pengunjung
 (903, '2017-04-11 23:46:19', '36.84.228.213', 'Chrome'),
 (904, '2017-04-11 23:46:44', '118.136.88.249', 'Chrome'),
 (905, '2017-04-11 23:49:50', '120.188.83.242', 'Chrome'),
-(906, '2017-04-11 23:49:52', '36.77.137.120', 'Chrome');
-INSERT INTO `tbl_pengunjung` (`pengunjung_id`, `pengunjung_tanggal`, `pengunjung_ip`, `pengunjung_perangkat`) VALUES
+(906, '2017-04-11 23:49:52', '36.77.137.120', 'Chrome'),
 (907, '2017-05-01 12:24:03', '::1', NULL),
 (908, '2017-05-01 12:24:53', '::1', NULL),
 (909, '2017-05-01 12:25:57', '::1', NULL),
@@ -1095,7 +1066,8 @@ INSERT INTO `tbl_pengunjung` (`pengunjung_id`, `pengunjung_tanggal`, `pengunjung
 (934, '2017-08-24 17:00:21', '::1', 'Firefox'),
 (935, '2017-08-25 17:10:13', '::1', 'Firefox'),
 (936, '2017-08-27 12:43:22', '::1', 'Chrome'),
-(937, '2017-08-28 07:35:26', '::1', 'Firefox'),
+(937, '2017-08-28 07:35:26', '::1', 'Firefox');
+INSERT INTO `tbl_pengunjung` (`pengunjung_id`, `pengunjung_tanggal`, `pengunjung_ip`, `pengunjung_perangkat`) VALUES
 (938, '2017-08-29 02:15:42', '::1', 'Firefox'),
 (939, '2017-09-01 13:51:54', '::1', 'Firefox'),
 (940, '2017-09-02 04:50:37', '::1', 'Firefox'),
@@ -1111,7 +1083,7 @@ INSERT INTO `tbl_pengunjung` (`pengunjung_id`, `pengunjung_tanggal`, `pengunjung
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_post_rating`
+-- Table structure for table `tbl_post_rating`
 --
 
 CREATE TABLE `tbl_post_rating` (
@@ -1125,7 +1097,7 @@ CREATE TABLE `tbl_post_rating` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_post_views`
+-- Table structure for table `tbl_post_views`
 --
 
 CREATE TABLE `tbl_post_views` (
@@ -1136,39 +1108,20 @@ CREATE TABLE `tbl_post_views` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_post_views`
+-- Dumping data for table `tbl_post_views`
 --
 
 INSERT INTO `tbl_post_views` (`views_id`, `views_tanggal`, `views_ip`, `views_tulisan_id`) VALUES
-(31, '2017-08-25 18:19:02', '::1', 28),
-(32, '2017-08-27 12:43:48', '::1', 30),
-(33, '2017-08-27 12:43:49', '::1', 0),
-(34, '2017-08-28 07:35:26', '::1', 31),
-(35, '2017-08-29 03:13:08', '::1', 30),
-(36, '2017-08-29 03:13:09', '::1', 0),
-(37, '2017-08-29 03:13:16', '::1', 29),
-(38, '2017-08-29 13:44:05', '::1', 31),
-(39, '2017-09-01 13:52:01', '::1', 30),
-(40, '2017-09-01 13:52:01', '::1', 0),
-(41, '2017-09-01 14:00:27', '::1', 25),
-(42, '2017-09-02 04:50:46', '::1', 31),
-(43, '2017-09-02 04:50:46', '::1', 0),
-(44, '2017-09-02 04:51:23', '::1', 28),
-(45, '2017-10-08 00:25:57', '::1', 25),
-(46, '2017-10-08 00:25:57', '::1', 0),
-(47, '2017-10-16 03:19:53', '::1', 31),
-(48, '2017-10-16 03:19:54', '::1', 0),
-(49, '2017-10-16 03:20:18', '::1', 25),
-(50, '2017-10-28 00:13:13', '::1', 30),
-(51, '2017-10-28 00:13:14', '::1', 0),
-(52, '2017-10-29 04:16:58', '::1', 30),
-(53, '2017-10-29 04:16:59', '::1', 0),
-(54, '2017-10-29 04:23:42', '::1', 31);
+(31, '2021-12-21 18:19:02', '::1', 28),
+(32, '2021-12-20 12:43:48', '::1', 30),
+(33, '2021-12-19 12:43:49', '::1', 0),
+(34, '2021-12-18 07:35:26', '::1', 31),
+(35, '2021-12-20 03:13:08', '::1', 30);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_tulisan`
+-- Table structure for table `tbl_tulisan`
 --
 
 CREATE TABLE `tbl_tulisan` (
@@ -1189,22 +1142,18 @@ CREATE TABLE `tbl_tulisan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_tulisan`
+-- Dumping data for table `tbl_tulisan`
 --
 
 INSERT INTO `tbl_tulisan` (`tulisan_id`, `tulisan_judul`, `tulisan_isi`, `tulisan_tanggal`, `tulisan_kategori_id`, `tulisan_kategori_nama`, `tulisan_views`, `tulisan_gambar`, `tulisan_pengguna_id`, `tulisan_author`, `tulisan_img_slider`, `tulisan_slug`, `tulisan_rating`, `tulisan_status`) VALUES
-(42, 'PKM AI', '<p>Merupakan program penulisan artikel ilmiah yang bersumber dari hasil kegiatan<br />\r\nkelompok mahasiswa dalam bidang pendidikan, penelitian atau pengabdian kepada<br />\r\nmasyarakat (misalnya studi kasus, praktik lapang, KKN, PKM, magang).<br />\r\n&nbsp;</p>\r\n', '2018-04-23 04:45:59', 5, 'Penelitian', 1, '77bdb284b1d4315a1b0714485e529c22.jpg', 0, '', 0, 'pkm-ai.html', 0, '1'),
-(49, 'PKM K', '<p>Merupakan program pengembangan ketrampilan mahasiswa dalam berwirausaha dan<br />\r\nberorientasi pada profit. Komoditas usaha yang dihasilkan dapat berupa barang atau jasa<br />\r\nyang selanjutnya merupakan salah satu modal dasar mahasiswa berwirausaha dan<br />\r\nmemasuki pasar. Jadi pemeran utama berwirausaha dalam hal ini adalah mahasiswa,<br />\r\nbukan masyarakat, ataupun mitra lainnya<br />\r\n&nbsp;</p>\r\n', '2018-04-23 04:48:53', 5, 'Penelitian', 0, '7e1282445555003538b03324fb2d79c5.jpg', 0, '', 0, 'pkm-k.html', 0, '1'),
-(50, 'PKM GT', '<p>Merupakan program penulisan ide atau gagasan visioner kelompok mahasiswa, berupa<br />\r\nkonsep yang memuat strategi solutif tentang sesuatu persoalan regional atau bahkan<br />\r\nnasional. Gagasan yang dituliskan dapat mengacu kepada isu aktual yang ada di<br />\r\nmasyarakat dan memerlukan solusi sistemik berjangka panjang berdasarkan hasil karya<br />\r\npikir yang cerdas dan implementatif.<br />\r\n&nbsp;</p>\r\n', '2018-04-23 04:49:23', 5, 'Penelitian', 0, 'c16b8777e979133f26372c52dc0c7bf6.jpg', 0, '', 0, 'pkm-gt.html', 0, '1'),
-(51, 'PKM M', '<p>Merupakan program penerapan ilmu pengetahuan, teknologi dan seni dalam upaya<br />\r\npeningkatan kinerja, membangun keterampilan usaha, penataan dan perbaikan<br />\r\nlingkungan, penguatan kelembagaan masyarakat, sosialisasi penggunaan obat secara<br />\r\nrasional, pengenalan dan pemahaman aspek hukum adat, upaya penyembuhan buta aksara<br />\r\ndan lain-lain bagi masyarakat baik formal maupun non-formal, yang sementara ini dinilai<br />\r\nkurang produktif. Disyaratkan dalam Proposal program ini adanya komitmen<br />\r\nbekerjasama secara tertulis dari komponen masyarakat yang akan dibantu/menjadi<br />\r\nkhalayak sasaran. Mitra PKMM-M adalah masyarakat yang tidak berorientasi profit.<br />\r\n&nbsp;</p>\r\n', '2018-04-23 04:49:48', 5, 'Penelitian', 0, 'bc60c8f7c9a91261019d61be2fe094d1.jpg', 0, '', 0, 'pkm-m.html', 0, '1'),
-(52, 'PKM P', '<p>Merupakan program penelitian yang dimaksudkan untuk mampu menjawab berbagai<br />\r\nmacam permasalahan keilmuan. Program ini dikelompokan menjadi penelitian bidang<br />\r\neksakta (PKM- PE) dan sosial humaniora (PKM-SH).<br />\r\nPKM-PE merupakan program penelitian yang dimaksudkan untuk mampu menjawab<br />\r\nberbagai macam permasalahan yang berkaitan dengan isu terkini bidang eksakta,<br />\r\nmisalnya mengidentifikasi faktor penentu mutu produk, inventarisasi atau eksplorasi<br />\r\nsumber daya, modifikasi produk, identifikasi dan pengujian khasiat senyawa kimia bahan<br />\r\nalam.<br />\r\nPKM-PSH merupakan program penelitian untuk memecahkan masalah sosial humaniora,<br />\r\nmisalnya survei kesehatan anak jalanan, metode pembelajaran aksara daerah di siswa<br />\r\nsekolah dasar, pengembangan metode pembelajaran, laju pertumbuhan ekonomi di<br />\r\nsentra kerajinan, permasalahan psikologi, budaya, seni yang mewarnai perilaku<br />\r\nmasyarakat dan hal-hal yang berkaitan dengan kearifan lokal.<br />\r\n&nbsp;</p>\r\n', '2018-04-23 04:50:18', 5, 'Penelitian', 1, 'e1051dfe815a8035289fba29c110eca6.jpg', 0, '', 0, 'pkm-p.html', 0, '1'),
-(53, 'PKM T', '<p>Merupakan program bantuan teknologi (mutu bahan baku, prototipe, model, peralatan<br />\r\natau proses produksi, pengolahan limbah, sistem jaminan mutu, kemasan dan lain-lain)<br />\r\natau manajemen (perbaikan mutu kinerja SDM, pemasaran, pembukuan, status usaha,<br />\r\nHaKI dan lain-lain) atau lainnya bagi industri berskala mikro atau kecil (industri<br />\r\nrumahan, pedagang kecil atau koperasi), menengah atau bahkan berskala besar, yang<br />\r\nmenyangkut kepentingan masyarakat luas dan sesuai dengan kebutuhan calon mitra<br />\r\nprogram. Mitra program yang dimaksud dalam hal ini adalah kelompok masyarakat yang<br />\r\nberorientasi pada profit, misalnya: pedagang, klinik bersalin, penyedia jasa dan sebagainya.<br />\r\nPKM-T mewajibkan mahasiswa bertukar pikiran dengan mitra terlebih dahulu, karena<br />\r\nproduk PKM-T merupakan solusi atas persoalan prioritas mitra. Dengan demikian, di<br />\r\ndalam usul program harus dilampirkan Surat Pernyataan Kesediaan Bekerjasama dari<br />\r\nMitra.<br />\r\n&nbsp;</p>\r\n', '2018-04-23 04:50:45', 5, 'Penelitian', 1, '567c6b14855a0a50f769baf56efe0eb6.jpg', 0, '', 0, 'pkm-t.html', 0, '1'),
-(54, 'Berita LOMBA MAHASISWA', '<p>Merupakan program penciptaan yang didasari atas karsa dan nalar mahasiswa, bersifat<br />\r\nkonstruktif serta menghasilkan suatu sistem, desain, model/barang atau prototipe dan<br />\r\nsejenisnya. Karya cipta tersebut bisa saja belum memberikan nilai kemanfaatan langsung<br />\r\nbagi pihak lain.<br />\r\n&nbsp;</p>\r\n', '2018-04-23 04:51:09', 2, 'Teknologi', 0, '4ff3ae84a64924828cf2b1b14ac8a731.jpg', 0, '', 0, 'berita-lomba-mahasiswa.html', 0, '0');
+(42, 'UNS Gelar UNS Innovation Festival  UNS Innovation Festival yang dikunjungi Gibran Rakabuming Raka merupakan pameran yang diiniasi Direktorat Inovasi dan Hilirisasi UNS.  Pameran ini digelar untuk memb', '<p>&nbsp;Rektor Universitas Sebelas Maret (<a href=\"https://hot.liputan6.com/read/4698311/3-kabar-terbaru-kasus-mahasiswa-uns-meninggal-saat-diklatsar-menwa-dibekukan\">UNS</a>) Surakarta Jamal Wiwoho menyampaikan permintaan maaf terkait kasus kematian salah satu mahasiswanya, Gilang Endi Saputra (21), saat mengikuti Pendidikan dan Latihan Dasar atau&nbsp;<a href=\"https://www.liputan6.com/search?q=diklatsar+menwa\">Diklatsar Resimen Mahasiswa (Menwa)</a>.</p>\r\n\r\n<p>&quot;Mewakili UNS saya meminta maaf atas kejadian yang telah menimpa almarhum Gilang saat mengikuti Diklat Menwa&nbsp;<a href=\"https://www.liputan6.com/search?q=UNS\">UNS</a>. Semoga almarhum Gilang diterima di sisi Allah SWT dan Husnul Khatimah,&quot; katanya di Solo, Minggu, dikutip&nbsp;<em>Antara</em>.</p>\r\n', '2018-04-23 04:45:59', 5, 'Penelitian', 1, 'cd90d64d9c7f873bd4c9aef264470434.jpg', 3, 'viorella ', 0, 'uns-gelar-uns-innovation-festival--uns-innovation-festival-yang-dikunjungi-gibran-rakabuming-raka-merupakan-pameran-yang-diiniasi-direktorat-inovasi-dan-hilirisasi-uns.--pameran-ini-digelar-untuk-membantu-para-pelaku-ekonomi-kreatif-agar-bangkit-dan-', 0, '1'),
+(54, 'Kunjungi UNS Innovation Festival 2021, Produk Inovatif ini Jadi Incaran Wali Kota Surakarta', '<p><strong>UNS Gelar UNS Innovation Festival</strong></p>\r\n\r\n<p>UNS Innovation Festival yang dikunjungi Gibran Rakabuming Raka merupakan pameran yang diiniasi Direktorat Inovasi dan Hilirisasi UNS.</p>\r\n\r\n<p>Pameran ini digelar untuk membantu para pelaku ekonomi kreatif agar bangkit dan mampu mengembangkan bisnis mereka pasca pelonggaran aktivitas masyarakat selama pandemi Covid-19.</p>\r\n\r\n<p>Ada pun, UNS Innovation Festival yang dihelat pada 10-14 Desember 2021, digelar secara luring di Gedung Auditoroum G.P.H Haryo Mataram UNS dan The Royal Surakarta Heritage.</p>\r\n\r\n<p>Sedangkan, untuk pelaksanaan secara daring, UNS Innovation Festival digelar melalui Zoom Cloud Meeting.<br />\r\nPada perhelatannya tahun ini, UNS Innovation Festival yang diadakan selama lima hari dapat terwujud berkat kerja sama antara UNS dan sejumlah pihak.</p>\r\n\r\n<p>Dalam hal ini, ada empat kementerian yang bermitra dengan UNS, yaitu Kementerian Pariwisata dan Ekonomi Kreatif (Kemenparekraf) RI, Kementerian Perdagangan (Kemendag) RI, Kementerian Sosial (Kemensos) RI dan Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi (Kemendikbudristek) RI.</p>\r\n\r\n<p>Di samping itu, UNS turut bermitra dengan Indonesia Direct dan Asosiasi Industri Usaha Mikro, Kecil, dan Menengah Indonesia (AKUMANDIRI).&nbsp;<strong>Humas UNS</strong></p>\r\n\r\n<p>Reporter: Y.C.A Sanjaya<br />\r\nEditor: Dwi Hastuti</p>\r\n', '2018-04-23 04:51:09', 5, 'Penelitian', 0, '24807d29d5485a1da3983ad58c802147.jpg', 3, 'viorella ', 0, 'kunjungi-uns-innovation-festival-2021,-produk-inovatif-ini-jadi-incaran-wali-kota-surakarta.html', 0, '1'),
+(56, 'Prodi S-1 Ilmu Lingkungan UNS Dampingi Masyarakat Desa Papringan Kembangkan Potensi Ekowisata', '<p><strong>UNS</strong>&nbsp;&mdash; Program Studi (Prodi) S-1 Ilmu Lingkungan Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA) Universitas Sebelas Maret (UNS) Surakarta melalui Program Desa Binaan berikan pendampingan dan pengembangan ekowisata kepada masyarakat. Pendampingan masyarakat pedesaan kali ini tertuju pada konsep pemanfaatan potensi secara berkelanjutan. Sasaran lokasi desa binaan kali ini adalah Desa Papringan, Kecamatan Kaliwungu, Kabupaten Semarang.</p>\r\n\r\n<p>Pengembangan ekowisata berbasis potensi agrikultur dan sumber daya air menjadi unggulan untuk dikembangkan. Hal ini selaras dengan&nbsp;<em>screening</em>&nbsp;awal tim desa binaan dan permintaan masyarakat setempat.</p>\r\n\r\n<p>Sebagai awalan pendampingan dan pengembangan ekowisata, Ilmu Lingkungan UNS melaksanakan&nbsp;<em>Focus Group Discussion</em>&nbsp;(FGD) dengan melibatkan pejabat desa maupun perwakilan masyarakat. Kegiatan tersebut dilaksanakan di Balai Desa Papringan pada November lalu.&nbsp;</p>\r\n\r\n<p>Pada FGD tersebut, tim Prodi S-1 Ilmu Lingkungan UNS yang beranggotakan dosen dan mahasiswa tidak hanya berdiskusi dengan masyarakat. Materi ekowisata dan penguatan kesehatan lingkungan disampaikan untuk membuka sekaligus memperkaya wawasan masyarakat terkait mitigasi sustainabilitas lingkungan setempat.</p>\r\n\r\n<p>Pemberian bantuan bibit anggur dan tempat sampah pada Desa Papringan dilakukan untuk menyokong perencanaan ekowisata tersebut. Terkait dengan bantuan bibit anggur, perwakilan mahasiswa memberikan materi tentang budidaya tanaman anggur. Tanaman anggur saat ini menjadi bagian dari perencanaan ekowisata masyarakat lokal.</p>\r\n', '2021-12-24 03:29:32', 3, 'Tips and Triks', 0, '7ca1aa9d7354ab414452e08f82979fb8.jpg', 3, 'viorella ', 0, 'prodi-s-1-ilmu-lingkungan-uns-dampingi-masyarakat-desa-papringan-kembangkan-potensi-ekowisata.html', 0, '1');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_user`
+-- Table structure for table `tbl_user`
 --
 
 CREATE TABLE `tbl_user` (
@@ -1216,71 +1165,68 @@ CREATE TABLE `tbl_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_user`
+-- Dumping data for table `tbl_user`
 --
 
 INSERT INTO `tbl_user` (`id_user`, `nim`, `nama_user`, `email`, `password`) VALUES
-(1, 12345, 'HERMANTO', 'hermantobs1p1@gmail.', '827ccb0eea8a706c4c34a16891f84e7b'),
-(2, 14002170, 'HERMANTO', 'hermantobs1p1@gmail.', '21232f297a57a5a743894a0e4a801fc3'),
-(3, 12345, 'hermanto', 'hermanto.hmt@bsi.ac.', '827ccb0eea8a706c4c34a16891f84e7b'),
-(4, 123456, 'hermanto', 'hermanto.hmt@bsi.ac.', 'e10adc3949ba59abbe56e057f20f883e');
+(8, 223344, 'Madu Zaneta', 'maduzanetaabadi@stud', '77b3e6926e7295494dd3be91c6934899');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `tbl_album`
+-- Indexes for table `tbl_album`
 --
 ALTER TABLE `tbl_album`
   ADD PRIMARY KEY (`album_id`),
   ADD KEY `album_pengguna_id` (`album_pengguna_id`);
 
 --
--- Indeks untuk tabel `tbl_inbox`
+-- Indexes for table `tbl_inbox`
 --
 ALTER TABLE `tbl_inbox`
   ADD PRIMARY KEY (`inbox_id`);
 
 --
--- Indeks untuk tabel `tbl_kategori`
+-- Indexes for table `tbl_kategori`
 --
 ALTER TABLE `tbl_kategori`
   ADD PRIMARY KEY (`kategori_id`);
 
 --
--- Indeks untuk tabel `tbl_log_aktivitas`
+-- Indexes for table `tbl_log_aktivitas`
 --
 ALTER TABLE `tbl_log_aktivitas`
   ADD PRIMARY KEY (`log_id`),
   ADD KEY `log_pengguna_id` (`log_pengguna_id`);
 
 --
--- Indeks untuk tabel `tbl_pengguna`
+-- Indexes for table `tbl_pengguna`
 --
 ALTER TABLE `tbl_pengguna`
   ADD PRIMARY KEY (`pengguna_id`);
 
 --
--- Indeks untuk tabel `tbl_pengunjung`
+-- Indexes for table `tbl_pengunjung`
 --
 ALTER TABLE `tbl_pengunjung`
   ADD PRIMARY KEY (`pengunjung_id`);
 
 --
--- Indeks untuk tabel `tbl_post_rating`
+-- Indexes for table `tbl_post_rating`
 --
 ALTER TABLE `tbl_post_rating`
   ADD PRIMARY KEY (`rate_id`);
 
 --
--- Indeks untuk tabel `tbl_post_views`
+-- Indexes for table `tbl_post_views`
 --
 ALTER TABLE `tbl_post_views`
   ADD PRIMARY KEY (`views_id`);
 
 --
--- Indeks untuk tabel `tbl_tulisan`
+-- Indexes for table `tbl_tulisan`
 --
 ALTER TABLE `tbl_tulisan`
   ADD PRIMARY KEY (`tulisan_id`),
@@ -1288,74 +1234,74 @@ ALTER TABLE `tbl_tulisan`
   ADD KEY `tulisan_pengguna_id` (`tulisan_pengguna_id`);
 
 --
--- Indeks untuk tabel `tbl_user`
+-- Indexes for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_album`
+-- AUTO_INCREMENT for table `tbl_album`
 --
 ALTER TABLE `tbl_album`
   MODIFY `album_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_inbox`
+-- AUTO_INCREMENT for table `tbl_inbox`
 --
 ALTER TABLE `tbl_inbox`
-  MODIFY `inbox_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `inbox_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_kategori`
+-- AUTO_INCREMENT for table `tbl_kategori`
 --
 ALTER TABLE `tbl_kategori`
   MODIFY `kategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_log_aktivitas`
+-- AUTO_INCREMENT for table `tbl_log_aktivitas`
 --
 ALTER TABLE `tbl_log_aktivitas`
   MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_pengguna`
+-- AUTO_INCREMENT for table `tbl_pengguna`
 --
 ALTER TABLE `tbl_pengguna`
-  MODIFY `pengguna_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `pengguna_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_pengunjung`
+-- AUTO_INCREMENT for table `tbl_pengunjung`
 --
 ALTER TABLE `tbl_pengunjung`
   MODIFY `pengunjung_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=949;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_post_rating`
+-- AUTO_INCREMENT for table `tbl_post_rating`
 --
 ALTER TABLE `tbl_post_rating`
   MODIFY `rate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_post_views`
+-- AUTO_INCREMENT for table `tbl_post_views`
 --
 ALTER TABLE `tbl_post_views`
   MODIFY `views_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_tulisan`
+-- AUTO_INCREMENT for table `tbl_tulisan`
 --
 ALTER TABLE `tbl_tulisan`
-  MODIFY `tulisan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `tulisan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_user`
+-- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

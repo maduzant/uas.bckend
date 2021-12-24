@@ -59,7 +59,7 @@
                     <div class="clearfix"></div>
                     <div class="col-sm-12 mt-5 footer">
                         <p class="text-white small text-center">
-                             &copy; Portal Berita BSI
+                             &copy; Portal Berita UNs
                            
                         </p>
                     </div>

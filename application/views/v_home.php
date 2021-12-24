@@ -65,7 +65,7 @@
         <div class="carousel-inner" role="listbox">
 
           <div class="carousel-item active">
-            <div class="carousel-background"><img src="<?php echo base_url().'theme/images/pkm2.jpg'?>" alt=""></div>
+            <div class="carousel-background"><img src="<?php echo base_url().'theme/images/5.jpg'?>" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Portal Berita UNS</h2>
@@ -76,7 +76,7 @@
           </div>
 
           <div class="carousel-item">
-            <div class="carousel-background"><img src="<?php echo base_url().'theme/images/pkm2.jpg'?>" alt=""></div>
+            <div class="carousel-background"><img src="<?php echo base_url().'theme/images/3.png'?>" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
                <h2>Portal Berita UNS</h2>
@@ -88,7 +88,7 @@
           </div>
 
           <div class="carousel-item">
-            <div class="carousel-background"><img src="<?php echo base_url().'theme/images/pkm3.jpg'?>" alt=""></div>
+            <div class="carousel-background"><img src="<?php echo base_url().'theme/images/1.png'?>" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Portal Berita UNS</h2>
@@ -100,7 +100,7 @@
           </div>
 
           <div class="carousel-item">
-            <div class="carousel-background"><img src="<?php echo base_url().'theme/images/pkm4.jpg'?>" alt=""></div>
+            <div class="carousel-background"><img src="<?php echo base_url().'theme/images/6.jpeg'?>" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
                <h2>Portal Berita UNS</h2>
@@ -112,7 +112,7 @@
           </div>
 
           <div class="carousel-item">
-            <div class="carousel-background"><img src="<?php echo base_url().'theme/images/pkm5.jpg'?>" alt=""></div>
+            <div class="carousel-background"><img src="<?php echo base_url().'theme/images/4.jpg'?>" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
                <h2>Portal Berita UNS</h2>

@@ -16,12 +16,11 @@
 
 			</div>
 			<div class="col-md-2 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
-				<h3>INFORMASI BSI</h3>
+				<h3>INFORMASI UNS</h3>
 				<ul class="float">
-					<li><a href="<?php echo base_url().'portfolio'?>">PMB BSI</a></li>
-					<li><a href="<?php echo base_url().'portfolio'?>">BEC</a></li>
-					<li><a href="<?php echo base_url().'portfolio'?>">BCC</a></li>
-					<li><a href="<?php echo base_url().'portfolio'?>">PKM</a></li>
+					<li><a href="<?php echo base_url().'portfolio'?>">PSDKU</a></li>
+					<li><a href="<?php echo base_url().'portfolio'?>">Teknik Informatika</a></li>
+					
 				</ul>
 			</div>
 
